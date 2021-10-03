@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+        min-width: 900px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+
+    .body-wrapper {
+        width: 80%;
+        min-width: 900px;
+        margin: 1rem auto;
+        padding: 2rem;
+        box-shadow: 0 15px 15px 2px rgb(178, 175, 175);
+        border-radius: 10px;
+        background-color: rgba(188, 222, 236, 0.271);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: white;
+    }
+    /* .btn-success {
+        background-color: #9fd980;
+    }
+    .btn-danger {
+        background-color: #ded581;
+    } */
+
+    @media (max-width: 900px) {
+        .input-group.mb-3 {
+            max-width: 300px;
+        }
+    }
+</style>
+
+<body>
+    <div class="body-wrapper">
+        <h1>BMI Calculator</h1>
+        <form action="/bmiCalculator" method="post">
+            <!-- <input type="number" name="weight" placeholder="Please enter your weight"> -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">kg</span>
+                    <span class="input-group-text">Weight</span>
+                </div>
+                <input class="form-control" type="text" name="weight" placeholder="Enter your weight">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">m</span>
+                    <span class="input-group-text">Height</span>
+                </div>
+                <input class="form-control" type="text" name="height" placeholder="Enter your weight">
+            </div>
+            <div class="btn-group btn-group-sm" role="group">
+                <button type="submit" class="btn btn-success">Caculate BMI</button>
+                <button type="button" class="btn btn-danger" onClick="window.location.reload();">Clear input</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
